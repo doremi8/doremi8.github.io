@@ -2,19 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>kvm | DoReMi</title>
+  <title>Kvm | DoReMi</title>
   <meta name="keywords" content="">
-  <meta name="description" content="kvm | DoReMi">
+  <meta name="description" content="Kvm | DoReMi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="kvm常用操作创建虚拟机123456789101112131415161718cp swarm03.xml vm-denis-cmdb1.xml#name修改为 ssd&#x2F;vm-denis-cmdb1#cpu内核调整, 内存格式改为GIB(2处), 容量调整, ssdname修改为 ssd&#x2F;vm-denis-cmdb1#如不需指定mac地址,则需去掉&amp;lt;mac address=&amp;apos;52:54:00">
-<meta name="keywords" content="linux,运维,python">
+<meta name="description" content="hello print(hello world) ls -l 内容…. 标题1标题2标题3">
+<meta name="keywords" content="test">
 <meta property="og:type" content="article">
-<meta property="og:title" content="kvm">
-<meta property="og:url" content="http:&#x2F;&#x2F;doremi8.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;kvm&#x2F;index.html">
+<meta property="og:title" content="Test2">
+<meta property="og:url" content="http:&#x2F;&#x2F;doremi8.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;test2-1&#x2F;index.html">
 <meta property="og:site_name" content="DoReMi">
-<meta property="og:description" content="kvm常用操作创建虚拟机123456789101112131415161718cp swarm03.xml vm-denis-cmdb1.xml#name修改为 ssd&#x2F;vm-denis-cmdb1#cpu内核调整, 内存格式改为GIB(2处), 容量调整, ssdname修改为 ssd&#x2F;vm-denis-cmdb1#如不需指定mac地址,则需去掉&amp;lt;mac address=&amp;apos;52:54:00">
+<meta property="og:description" content="hello print(hello world) ls -l 内容…. 标题1标题2标题3">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-27T03:13:30.017Z">
+<meta property="og:updated_time" content="2019-11-27T05:37:12.058Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -266,8 +266,16 @@
            href="/2019/11/27/kvm/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="kvm">kvm</span>
+            <span class="post-title" title="Kvm">Kvm</span>
             <span class="post-date" title="2019-11-27 11:13:12">2019/11/27</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/27/kvm%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Kvm常用操作">Kvm常用操作</span>
+            <span class="post-date" title="2019-11-27 11:12:39">2019/11/27</span>
         </a>
         
         <a  class=""
@@ -279,18 +287,10 @@
         </a>
         
         <a  class=""
-           href="/2019/11/27/kvm%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="kvm常用操作">kvm常用操作</span>
-            <span class="post-date" title="2019-11-27 11:12:39">2019/11/27</span>
-        </a>
-        
-        <a  class=""
            href="/2019/11/27/test/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="test">test</span>
+            <span class="post-title" title="Test">Test</span>
             <span class="post-date" title="2019-11-27 10:42:09">2019/11/27</span>
         </a>
         
@@ -316,7 +316,7 @@
     <div class="pjax">
         <article id="post-kvm" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">kvm</h1>
+        <h1 class="article-title">Kvm</h1>
     
     <div class="article-meta">
         
@@ -364,19 +364,167 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="kvm常用操作"><a href="#kvm常用操作" class="headerlink" title="kvm常用操作"></a>kvm常用操作</h1><h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cp swarm03.xml vm-denis-cmdb1.xml</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">name修改为 ssd/vm-denis-cmdb1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">cpu内核调整, 内存格式改为GIB(2处), 容量调整, ssdname修改为 ssd/vm-denis-cmdb1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">如不需指定mac地址,则需去掉&lt;mac address=<span class="string">'52:54:00:4F:BB:CF'</span>/&gt;, 如需指定则设置成网络中唯一的地址</span></span><br><span class="line"></span><br><span class="line">vi vm-denis-cmdb1.xml</span><br><span class="line"></span><br><span class="line">rbd list ssd</span><br><span class="line">rbd snap list ssd/CentOS7Templet</span><br><span class="line">rbd clone ssd/CentOS7Templet@base ssd/vm-denis-cmdb1  #复制快照</span><br><span class="line">rbd resize  ssd/vm-denis-cmdb1 --size 30G   或者  virsh blockresize --domian vm-denis-cmbd1 --path vda --size 30G #调整硬盘大小 </span><br><span class="line">virsh define  vm-denis-cmdb1.xml #从XML文件定义（但不启动）一个虚拟机</span><br><span class="line">virsh start vm-denis-cmdb1</span><br><span class="line"></span><br><span class="line">virsh list</span><br><span class="line">virsh dumpxml &lt;id&gt;  #查看用于vnc view连接的端口</span><br></pre></td></tr></table></figure>
+        <h1 id="kvm常用操作"><a href="#kvm常用操作" class="headerlink" title="kvm常用操作"></a>kvm常用操作</h1><h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><pre><code class="shell">
+cp swarm03.xml vm-denis-cmdb1.xml
 
+#name修改为 ssd/vm-denis-cmdb1
+#cpu内核调整, 内存格式改为GIB(2处), 容量调整, ssdname修改为 ssd/vm-denis-cmdb1
+#如不需指定mac地址,则需去掉&lt;mac address=&#39;52:54:00:4F:BB:CF&#39;/&gt;, 如需指定则设置成网络中唯一的地址
+
+vi vm-denis-cmdb1.xml
+
+rbd list ssd
+rbd snap list ssd/CentOS7Templet
+rbd clone ssd/CentOS7Templet@base ssd/vm-denis-cmdb1  #复制快照
+rbd resize  ssd/vm-denis-cmdb1 --size 30G   或者  virsh blockresize --domian vm-denis-cmbd1 --path vda --size 30G #调整硬盘大小 
+virsh define  vm-denis-cmdb1.xml #从XML文件定义（但不启动）一个虚拟机
+virsh start vm-denis-cmdb1
+
+virsh list
+virsh dumpxml &lt;id&gt;  #查看用于vnc view连接的端口</code></pre>
 <p>用vnc viewer连接192.168.252.82:&lt;端口&gt;后查看ip, 即可用xshell连接</p>
 <h2 id="登录虚拟机后操作"><a href="#登录虚拟机后操作" class="headerlink" title="登录虚拟机后操作"></a>登录虚拟机后操作</h2><p>更改默认密码</p>
 <p>关闭防火墙</p>
 <p>增加公钥</p>
 <p>关闭sshd里dns</p>
-<h2 id="快照操作"><a href="#快照操作" class="headerlink" title="快照操作"></a>快照操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">virsh -list -all</span><br><span class="line"></span><br><span class="line"> -     vm-denis-k8s1                  shut off</span><br><span class="line"></span><br><span class="line">rbd snap create ssd/vm-denis-k8s1@snapshot1   #创建快照(首先关闭虚拟机)</span><br><span class="line">rbd snap ls ssd/vm-denis-k8s1  </span><br><span class="line">virsh start vm-denis-k8s1  #启动虚拟机</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rbd snap rollback ssd/vm-denis-k8s1@snapshot1  #恢复快照(关闭虚拟机后操作)</span><br><span class="line">rbd snap rm ssd/vm-denis-k8s1@snapshot1  #删除快照</span><br><span class="line">rbd snap purge ssd/vm-denis-k8s1 #删除多个快照</span><br></pre></td></tr></table></figure>
+<h2 id="快照操作"><a href="#快照操作" class="headerlink" title="快照操作"></a>快照操作</h2><pre><code class="shell">virsh -list -all
 
-<h2 id="其它操作"><a href="#其它操作" class="headerlink" title="其它操作"></a>其它操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">virsh destroy &lt;id&gt; #停止虚拟机</span><br><span class="line">virsh undefine vm-denis-cmdb1 #取消虚拟机</span><br><span class="line"></span><br><span class="line">virsh create vm-denis-cmdb1.xml #一次性启动</span><br><span class="line"></span><br><span class="line">virsh blockresize分情况</span><br><span class="line">- 如果虚拟机是开机状态下，不用调rbd resize，直接调virsh blockresize就行，它会帮忙自动执行rbd resize或qemu-img resize</span><br><span class="line">- 如果虚拟机是关机状态，则不用调该命令，直接调底层的resize，比如rbd就调rbd resize，qcow2就调qemu-img resize</span><br><span class="line"></span><br><span class="line">rbd rm  ssd/vm-denis-cmdb1  #删除镜像</span><br></pre></td></tr></table></figure>
+ -     vm-denis-k8s1                  shut off
 
-<h2 id="调整虚拟机硬盘大小"><a href="#调整虚拟机硬盘大小" class="headerlink" title="调整虚拟机硬盘大小"></a>调整虚拟机硬盘大小</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 虚拟机查看原大小</span></span><br><span class="line">[root@test ~]# fdisk /dev/vda -l</span><br><span class="line"></span><br><span class="line">Disk /dev/vda: 21.5 GB, 21474836480 bytes, 41943040 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: dos</span><br><span class="line">Disk identifier: 0x000bc509</span><br><span class="line"></span><br><span class="line">   Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/vda1   *        2048    41943039    20970496   83  Linux</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">在82上调整成30G</span></span><br><span class="line">[root@rxserver3 ~]# rbd resize  ssd/vm-denis-cmdb1 --size 30G</span><br><span class="line">Resizing image: 100% complete...done.</span><br><span class="line"></span><br><span class="line">[root@rxserver3 ~]# rbd --image ssd/vm-denis-cmdb1 info</span><br><span class="line">rbd image 'vm-denis-cmdb1':</span><br><span class="line">	size 30 GiB in 7680 objects</span><br><span class="line">	order 22 (4 MiB objects)</span><br><span class="line">	id: 7650c6b8b4567</span><br><span class="line">	block_name_prefix: rbd_data.7650c6b8b4567</span><br><span class="line">	format: 2</span><br><span class="line">	features: layering, exclusive-lock, object-map, fast-diff, deep-flatten</span><br><span class="line">	op_features: </span><br><span class="line">	flags: </span><br><span class="line">	create_timestamp: Wed Sep  4 17:04:55 2019</span><br><span class="line">	parent: ssd/CentOS7Templet@base</span><br><span class="line">	overlap: 20 GiB</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 虚拟机poweroff后重启, 再次查看大小</span></span><br><span class="line"></span><br><span class="line">[root@localhost ~]# fdisk -l</span><br><span class="line"></span><br><span class="line">Disk /dev/vda: 32.2 GB, 32212254720 bytes, 62914560 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: dos</span><br><span class="line">Disk identifier: 0x000bc509</span><br><span class="line"></span><br><span class="line">   Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/vda1   *        2048    41943039    20970496   83  Linux</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">重新分区, 这是在只有一个分区的情况下 </span></span><br><span class="line"></span><br><span class="line">[root@localhost ~]# fdisk /dev/vda </span><br><span class="line">Welcome to fdisk (util-linux 2.23.2).</span><br><span class="line"></span><br><span class="line">Changes will remain in memory only, until you decide to write them.</span><br><span class="line">Be careful before using the write command.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Command (m for help): d</span><br><span class="line">Selected partition 1</span><br><span class="line">Partition 1 is deleted</span><br><span class="line"></span><br><span class="line">Command (m for help): n</span><br><span class="line">Partition type:</span><br><span class="line">   p   primary (0 primary, 0 extended, 4 free)</span><br><span class="line">   e   extended</span><br><span class="line">Select (default p): p  </span><br><span class="line">Partition number (1-4, default 1): 1</span><br><span class="line">First sector (2048-62914559, default 2048): </span><br><span class="line">Using default value 2048</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (2048-62914559, default 62914559): </span><br><span class="line">Using default value 62914559</span><br><span class="line">Partition 1 of type Linux and of size 30 GiB is set</span><br><span class="line"></span><br><span class="line">Command (m for help): p</span><br><span class="line"></span><br><span class="line">Disk /dev/vda: 32.2 GB, 32212254720 bytes, 62914560 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: dos</span><br><span class="line">Disk identifier: 0x000bc509</span><br><span class="line"></span><br><span class="line">   Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/vda1            2048    62914559    31456256   83  Linux</span><br><span class="line"></span><br><span class="line">Command (m for help): w  </span><br><span class="line">The partition table has been altered!</span><br><span class="line"></span><br><span class="line">Calling ioctl() to re-read partition table.</span><br><span class="line"></span><br><span class="line">WARNING: Re-reading the partition table failed with error 16: Device or resource busy.</span><br><span class="line">The kernel still uses the old table. The new table will be used at</span><br><span class="line">the next reboot or after you run partprobe(8) or kpartx(8)</span><br><span class="line">Syncing disks.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启虚拟机后操作</span></span><br><span class="line">[root@localhost ~]# reboot</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# resize2fs /dev/vda1 </span><br><span class="line">resize2fs 1.42.9 (28-Dec-2013)</span><br><span class="line">Filesystem at /dev/vda1 is mounted on /; on-line resizing required</span><br><span class="line">old_desc_blocks = 3, new_desc_blocks = 4</span><br><span class="line">The filesystem on /dev/vda1 is now 7864064 blocks long.</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# df -h</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/vda1        30G  1.1G   27G   4% /</span><br><span class="line">devtmpfs        1.9G     0  1.9G   0% /dev</span><br><span class="line">tmpfs           1.9G     0  1.9G   0% /dev/shm</span><br><span class="line">tmpfs           1.9G  8.3M  1.9G   1% /run</span><br><span class="line">tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup</span><br><span class="line">tmpfs           380M     0  380M   0% /run/user/0</span><br></pre></td></tr></table></figure>
+rbd snap create ssd/vm-denis-k8s1@snapshot1   #创建快照(首先关闭虚拟机)
+rbd snap ls ssd/vm-denis-k8s1  
+virsh start vm-denis-k8s1  #启动虚拟机
 
+
+rbd snap rollback ssd/vm-denis-k8s1@snapshot1  #恢复快照(关闭虚拟机后操作)
+rbd snap rm ssd/vm-denis-k8s1@snapshot1  #删除快照
+rbd snap purge ssd/vm-denis-k8s1 #删除多个快照</code></pre>
+<h2 id="其它操作"><a href="#其它操作" class="headerlink" title="其它操作"></a>其它操作</h2><pre><code class="shell">virsh destroy &lt;id&gt; #停止虚拟机
+virsh undefine vm-denis-cmdb1 #取消虚拟机
+
+virsh create vm-denis-cmdb1.xml #一次性启动
+
+virsh blockresize分情况
+- 如果虚拟机是开机状态下，不用调rbd resize，直接调virsh blockresize就行，它会帮忙自动执行rbd resize或qemu-img resize
+- 如果虚拟机是关机状态，则不用调该命令，直接调底层的resize，比如rbd就调rbd resize，qcow2就调qemu-img resize
+
+rbd rm  ssd/vm-denis-cmdb1  #删除镜像
+
+
+</code></pre>
+<h2 id="调整虚拟机硬盘大小"><a href="#调整虚拟机硬盘大小" class="headerlink" title="调整虚拟机硬盘大小"></a>调整虚拟机硬盘大小</h2><pre><code class="shell"># 虚拟机查看原大小
+[root@test ~]# fdisk /dev/vda -l
+
+Disk /dev/vda: 21.5 GB, 21474836480 bytes, 41943040 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000bc509
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vda1   *        2048    41943039    20970496   83  Linux
+
+
+#在82上调整成30G
+[root@rxserver3 ~]# rbd resize  ssd/vm-denis-cmdb1 --size 30G
+Resizing image: 100% complete...done.
+
+[root@rxserver3 ~]# rbd --image ssd/vm-denis-cmdb1 info
+rbd image &#39;vm-denis-cmdb1&#39;:
+    size 30 GiB in 7680 objects
+    order 22 (4 MiB objects)
+    id: 7650c6b8b4567
+    block_name_prefix: rbd_data.7650c6b8b4567
+    format: 2
+    features: layering, exclusive-lock, object-map, fast-diff, deep-flatten
+    op_features: 
+    flags: 
+    create_timestamp: Wed Sep  4 17:04:55 2019
+    parent: ssd/CentOS7Templet@base
+    overlap: 20 GiB
+
+
+# 虚拟机poweroff后重启, 再次查看大小
+
+[root@localhost ~]# fdisk -l
+
+Disk /dev/vda: 32.2 GB, 32212254720 bytes, 62914560 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000bc509
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vda1   *        2048    41943039    20970496   83  Linux
+
+#重新分区, 这是在只有一个分区的情况下 
+
+[root@localhost ~]# fdisk /dev/vda 
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): d
+Selected partition 1
+Partition 1 is deleted
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p  
+Partition number (1-4, default 1): 1
+First sector (2048-62914559, default 2048): 
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-62914559, default 62914559): 
+Using default value 62914559
+Partition 1 of type Linux and of size 30 GiB is set
+
+Command (m for help): p
+
+Disk /dev/vda: 32.2 GB, 32212254720 bytes, 62914560 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000bc509
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vda1            2048    62914559    31456256   83  Linux
+
+Command (m for help): w  
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error 16: Device or resource busy.
+The kernel still uses the old table. The new table will be used at
+the next reboot or after you run partprobe(8) or kpartx(8)
+Syncing disks.
+
+
+# 重启虚拟机后操作
+[root@localhost ~]# reboot
+
+[root@localhost ~]# resize2fs /dev/vda1 
+resize2fs 1.42.9 (28-Dec-2013)
+Filesystem at /dev/vda1 is mounted on /; on-line resizing required
+old_desc_blocks = 3, new_desc_blocks = 4
+The filesystem on /dev/vda1 is now 7864064 blocks long.
+
+[root@localhost ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        30G  1.1G   27G   4% /
+devtmpfs        1.9G     0  1.9G   0% /dev
+tmpfs           1.9G     0  1.9G   0% /dev/shm
+tmpfs           1.9G  8.3M  1.9G   1% /run
+tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
+tmpfs           380M     0  380M   0% /run/user/0
+</code></pre>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://blog.51cto.com/wutou/1782931" target="_blank" rel="noopener">https://blog.51cto.com/wutou/1782931</a></p>
 <p><a href="https://blog.51cto.com/speakingbaicai/1161964" target="_blank" rel="noopener">https://blog.51cto.com/speakingbaicai/1161964</a></p>
 <p><a href="https://www.cnblogs.com/chenjiahe/p/5919426.html" target="_blank" rel="noopener">https://www.cnblogs.com/chenjiahe/p/5919426.html</a></p>
@@ -393,12 +541,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>kvm</p>
+    <p><span class="copy-title">文章标题:</span>Kvm</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="Denis">Denis</a></p>
     <p><span class="copy-title">发布时间:</span>2019-11-27, 11:13:12</p>
     <p><span class="copy-title">最后更新:</span>2019-11-27, 11:13:30</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/27/kvm/" title="kvm">http://doremi8.com/2019/11/27/kvm/</a>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/27/kvm/" title="Kvm">http://doremi8.com/2019/11/27/kvm/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -673,16 +821,6 @@
     }
     
 
-    
-    .post .pjax article :not(pre) > code {
-        color: #24292e;
-        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
-        background-color: rgba(27,31,35,.05);
-        border-radius: 3px;
-        font-size: 85%;
-        margin: 0;
-        padding: .2em .4em;
-    }
     
 </style>
 
